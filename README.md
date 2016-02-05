@@ -34,5 +34,8 @@ u need to make if will use msqli  or PDO or mongodb ... user select db driver an
 make   install/   - app/   and  public/    folders
 inside app make all php  things   and  inside  public   make  all html  tpl  php css  js  things
 
+Result:
+Save database connection settings into config.php file (also save selected value for db driver: mysql, mysqli, Mongo)
+Executed *.sql import files
 
 
