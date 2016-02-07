@@ -3,29 +3,25 @@ Stands for checking php version, mysql installed, import sql
 
 Time estimate: 2hrs
 
-1. Check nginx installed, nginx version
-2. Check Apache installed, Apache version
-3. Check PHP version
-4. Check MySQL version
-5. Create title (?)
-6. Create database (?)
+ - check PHP version
+ - check which webserver is running (Apache or nginx)
+ - check webserver version (Apache or nginx)
+ - check which database driver is available (mysql, mysqli, PDO, mongo)
 
-It is like step 1    step 2  step 3 .... finished!  please delete or reanme install folder...
+ - enter site's title
+ - enter user/password/database credentials
+ - select database driver (mysql, mysqli, PDO, mongo)
 
-step 1:
-check PHP version
-MySQL installed
-MySQL version
-nginx installed, nginx version
-or
-apache installed, apache version
+ - validate site's title
+ - check database connection is working
+ - check MySQL version (if any mysql* driver already installed) [NEED A DB CONNECTION]
 
-step 2:
-enter user/password/db_name for mysql
+ - save settings into config.php file
+   - db credentials
+   - db driver
+   - site's title
 
-step 3:
-create app folder
-create tables in database
+ - import sql quieries from *.sql files [INTERNALLY, NO USER ADDICTION REQUIRED]
 
 Bonus:
 u can do step 3 like  progress bar animated how things go to 100% and text what backedn do ..
@@ -37,5 +33,3 @@ inside app make all php  things   and  inside  public   make  all html  tpl  php
 Result:
 Save database connection settings into config.php file (also save selected value for db driver: mysql, mysqli, Mongo)
 Executed *.sql import files
-
-
