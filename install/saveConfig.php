@@ -1,8 +1,11 @@
 <?php
 
-if (isset($_POST) && isset($_POST['bsubmit'])
-    && isset($_POST['dbuser']) && isset($_POST['dbpass'])
-    && isset($_POST['dbname']) && isset($_POST['dbdriver'])
+if (   isset($_POST)
+    && isset($_POST['bsubmit'])
+    && isset($_POST['dbuser'])
+    && isset($_POST['dbpass'])
+    && isset($_POST['dbname'])
+    && isset($_POST['dbdriver'])
     && isset($_POST['dbserver'])
 ) {
     $sitename = $_POST['sitename'];
