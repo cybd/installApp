@@ -3,11 +3,13 @@ Stands for checking php version, mysql installed, import sql
 
 Time estimate: 2hrs
 
+step 1:
  - check PHP version
  - check which webserver is running (Apache or nginx)
  - check webserver version (Apache or nginx)
  - check which database driver is available (mysql, mysqli, PDO, mongo)
 
+step 2:
  - enter site's title
  - enter user/password/database credentials
  - select database driver (mysql, mysqli, PDO, mongo)
@@ -16,6 +18,7 @@ Time estimate: 2hrs
  - check database connection is working
  - check MySQL version (if any mysql* driver already installed) [NEED A DB CONNECTION]
 
+step 3:
  - save settings into config.php file
    - db credentials
    - db driver
