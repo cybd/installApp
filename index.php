@@ -3,11 +3,11 @@ require 'app/config.php';
 
 if (extension_loaded('mysqli')) {
 
-  $mysqli = new mysqli($dbserver, $dbuser, $dbpass, $dbname);
-  if ($mysqli->connect_errno) {
-      echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
-  }
-  echo $mysqli->server_info . "\n";
+    $mysqli = new mysqli($dbserver, $dbuser, $dbpass, $dbname);
+    if ($mysqli->connect_errno) {
+        echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+    }
+    echo $mysqli->server_info . "\n";
 
 }
 
@@ -18,12 +18,12 @@ include_once 'install/SoftwareExtractor.php';
 
 $o = new SoftwareExtractor();
 var_dump(
-  $o->getPHPversion(),
-  $o->getWebServerVersion(),
-  $o->getWebServerName(),
-  $o->isWebServerNameInstalled('iis'),
-  $o->isWebServerNameInstalled('apache'),
-  $o->isWebServerNameInstalled('nginx')
+    $o->getPHPversion(),
+    $o->getWebServerVersion(),
+    $o->getWebServerName(),
+    $o->isWebServerNameInstalled('iis'),
+    $o->isWebServerNameInstalled('apache'),
+    $o->isWebServerNameInstalled('nginx')
 );
 
 die();
