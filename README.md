@@ -8,6 +8,7 @@ step 1:
  - check which webserver is running (Apache or nginx)
  - check webserver version (Apache or nginx)
  - check which database driver is available (mysql, mysqli, PDO, mongo)
+ - check file permissions for config.php
 
 step 2:
  - enter site's title
