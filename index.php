@@ -1,5 +1,19 @@
 <?php
+require 'app/config.php';
 
+if (extension_loaded('mysqli')) {
+
+  $mysqli = new mysqli($dbserver, $dbuser, $dbpass, $dbname);
+  if ($mysqli->connect_errno) {
+      echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+  }
+  echo $mysqli->server_info . "\n";
+
+}
+
+// phpinfo();
+
+die();
 include_once 'install/SoftwareExtractor.php';
 
 $o = new SoftwareExtractor();

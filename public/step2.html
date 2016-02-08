@@ -2,9 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Step 2</title>
 </head>
 <body>
+    <h1>Step 2</h1>
+    <ul>
+        <li>check which database driver is available (mysql, mysqli, PDO, mongo)</li>
+        <li>check file permissions for config.php</li>
+        <li>enter site's title</li>
+        <li>enter user/password/database credentials</li>
+        <li>select database driver (mysql, mysqli, pdo_mysql, mongo)</li>
+        <li>validate site's title</li>
+        <li>check database connection is working</li>
+        <li>check MySQL version (if any mysql* driver already installed) [NEED A DB CONNECTION]</li>
+    </ul>
+
+    <form method="POST" action="/index.php">
+        <h4>Site name</h4>
+        <input type="text" name="sitename" id="sitename"/>
+
+        <h4>Database credentials</h4>
+        DB server: <input type="text" name="dbserver" id="dbserver"/><br/>
+        DB user: <input type="text" name="dbuser" id="dbuser"/><br/>
+        DB pass: <input type="text" name="dbpass" id="dbpass"/><br/>
+        DB name: <input type="text" name="dbname" id="dbname"/>
+
+        <h4>Database driver:</h4>
+        <select name="dbdriver" id="dbdriver">
+            <option value="">Please select...</option>
+            <option value="mysql">mysql</option>
+            <option value="mysqli">mysqli</option>
+            <option value="pdo_mysql">PDO MySQL</option>
+            <option value="mongo">Mongo</option>
+        </select>
+
+        <hr>
+        <div>
+            <a href="step3.html"><button>Step 3</button></a>
+        </div>
+        <br/>
+        <div>
+            <input type="submit" name="bsubmit" value="save"/>
+        </div>
+    </form>
 
 </body>
 </html>

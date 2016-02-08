@@ -64,31 +64,46 @@ class SoftwareExtractor
    */
   public function getMySQLVersion()
   {
-    # code...
+    if (extension_loaded('mysqli')) {
+
+      $mysqli = new mysqli($dbserver, $dbuser, $dbpass, $dbname);
+      if ($mysqli->connect_errno) {
+          echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+      }
+      return $mysqli->server_info;
+
+    } else {
+      throw new Exception('Cannot get version, mysqli is not loaded');
+    }
   }
 
   /**
    * @return bool
    */
-  public function isMySQLInstalled()
+  public function isMySQLLoaded()
   {
-    # code...
+    return extension_loaded('mysql');
   }
 
   /**
    * @return bool
    */
-  public function isMySQLImprovedInstalled()
+  public function isMySQLImprovedLoaded()
   {
-    # code...
+    return extension_loaded('mysqli');
   }
+
+public function isPDOMySQLLoaded()
+{
+  return extension_loaded('pdo_mysql');
+}
 
   /**
    * @return bool
    */
-  public function isMongoDBInstalled()
+  public function isMongoDBLoaded()
   {
-    # code...
+    return extension_loaded('mongodb');
   }
 
   /**
