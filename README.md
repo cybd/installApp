@@ -3,6 +3,8 @@ Stands for checking php version, mysql installed, import sql
 
 Time estimate: 2hrs
 
+ - version comparator
+
 step 1:
  + check PHP version
  + check by name which webserver is running (Apache or nginx)
